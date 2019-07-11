@@ -1,0 +1,8 @@
+{
+    "presets": [
+        "@babel/typescript"
+    ],
+    "plugins": [
+        "@pika/web/assets/babel-plugin.js"
+    ]
+}

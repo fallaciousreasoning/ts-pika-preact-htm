@@ -1,0 +1,35 @@
+{
+  "name": "pika-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "pika-web",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm run build:modules && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:modules": "pika-web --dest dist/web_modules",
+    "build:js": "babel src --out-dir dist/src --extensions \".ts,.tsx\" --source-maps inline"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "htm": "^2.1.1",
+    "preact": "^8.4.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-typescript": "^7.3.3",
+    "@pika/web": "^0.4.3",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "typescript": "^3.5.3"
+  }
+}
